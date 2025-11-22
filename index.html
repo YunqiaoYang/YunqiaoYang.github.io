@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yunqiao Yang - Homepage</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #0366d6; /* GitHub Blue */
+            --highlight-bg: #f1f8ff;
+            --bg-color: #ffffff;
+            --text-color: #24292e;
+            --light-gray: #eaeaea;
+            --date-color: #586069;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 15px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        nav a:hover { color: var(--accent-color); }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--light-gray);
+            flex-shrink: 0;
+        }
+
+        .bio h1 { margin-top: 0; font-size: 2.2rem; margin-bottom: 10px;}
+        .bio p { font-size: 1.05rem; color: #444; }
+        
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background-color: var(--highlight-bg);
+            border: 1px solid #cce5ff;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 40px;
+        }
+        .highlight-box h3 { margin-top: 0; color: var(--primary-color); }
+
+        /* Headings */
+        h2 {
+            font-size: 1.7rem;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 8px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        /* Publications List */
+        .pub-list { list-style: none; padding: 0; }
+        .pub-item { margin-bottom: 25px; }
+        
+        .pub-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+        
+        .pub-authors { color: #555; margin: 4px 0; }
+        .me { text-decoration: underline; font-weight: 600; } /* Highlight your name */
+        
+        .pub-venue {
+            font-style: italic;
+            color: var(--date-color);
+            margin-bottom: 5px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #eee;
+            color: #333;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            font-weight: 500;
+        }
+        .tag.highlight { background-color: #ffeebb; color: #664d03; }
+
+        .pub-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-right: 10px;
+        }
+        .pub-links a:hover { text-decoration: underline; }
+
+        /* News List */
+        .news-list { list-style: none; padding: 0; }
+        .news-list li { margin-bottom: 10px; display: flex; }
+        .news-date {
+            font-weight: bold;
+            min-width: 100px;
+            color: var(--date-color);
+            font-family: monospace;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid var(--light-gray);
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero { flex-direction: column; align-items: center; text-align: center; }
+            .news-list li { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <a href="#" class="logo">Yunqiao Yang</a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#news">News</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
+            </nav>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section id="about" class="hero">
+            <img src="https://github.com/YunqiaoYang.png" alt="Yunqiao Yang" class="profile-img">
+            <div class="bio">
+                <h1>Yunqiao Yang (杨昀樵)</h1>
+                <p>
+                    I am a 1st year Ph.D. student at the <strong>Multimedia Laboratory (MMLab)</strong>, 
+                    <a href="https://www.cuhk.edu.hk/" target="_blank">The Chinese University of Hong Kong (CUHK)</a>, 
+                    advised by Prof. <a href="https://www.ee.cuhk.edu.hk/~hsli/" target="_blank">Hongsheng Li</a>.
+                </p>
+                <p>
+                    My research interests lie in <strong>Large Language Models (LLMs)</strong>, 
+                    specifically focusing on <strong>Preference Optimization</strong>, <strong>Mathematical Reasoning</strong>, 
+                    and <strong>Code Generation Agents</strong>.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/YunqiaoYang" target="_blank">GitHub</a>
+                    <a href="https://www.semanticscholar.org/author/Yunqiao-Yang/2359451194" target="_blank">Semantic Scholar</a>
+                    <a href="mailto:yangyunqiao7@gmail.com">Email</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWS SECTION -->
+        <section id="news">
+            <h2>🔥 News</h2>
+            <ul class="news-list">
+                <li>
+                    <span class="news-date">May 2025</span>
+                    <span>Paper "WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch" accepted as the <strong>Oral of NeurIPS 2025</strong>.</span>
+                </li>
+                <li>
+                    <span class="news-date">Feb 2025</span>
+                    <span>Paper "Probability-Consistent Preference Optimization (PCPO)" accepted to <strong>Findings of ACL 2025</strong>.</span>
+                </li>
+                <li>
+                    <span class="news-date">Aug 2025</span>
+                    <span>Joined MMLab @ CUHK as a Ph.D. student.</span>
+                </li>
+                <li>
+                    <span class="news-date">June 2025</span>
+                    <span>Graduated from Shanghai Jiao Tong University as an undergraduate student.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- PUBLICATIONS SECTION -->
+        <section id="publications">
+            <h2>📝 Selected Publications</h2>
+            <ul class="pub-list">
+                <!-- Paper 1: WebGen-Bench -->
+                <li class="pub-item">
+                    <div class="pub-title">WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch</div>
+                    <div class="pub-authors">
+                        Zimu Lu*, <span class="me">Yunqiao Yang*</span>, Houxing Ren*, Haotian Hou, Han Xiao, Ke Wang, Weikang Shi, Aojun Zhou, Mingjie Zhan, Hongsheng Li
+                    </div>
+                    <div class="pub-venue"><strong>Oral</strong> of the Thirty-Ninth Annual Conference on Neural Information Processing Systems</div>
+                    <div class="pub-links">
+                        <span class="tag highlight">Selected</span>
+                        <a href="#" target="_blank">[Paper]</a> 
+                        <a href="https://github.com/mnluzimu/WebGen-Bench" target="_blank">[Code]</a>
+                    </div>
+                </li>
+              
+                <!-- Paper 2: PCPO -->
+                <li class="pub-item">
+                    <div class="pub-title">Probability-Consistent Preference Optimization for Enhanced LLM Reasoning</div>
+                    <div class="pub-authors">
+                        <span class="me">Yunqiao Yang</span>, Houxing Ren, Zimu Lu, Ke Wang, Weikang Shi, Aojun Zhou, Junting Pan, Mingjie Zhan, Hongsheng Li
+                    </div>
+                    <div class="pub-venue">Findings of the Association for Computational Linguistics (ACL), 2025</div>
+                    <div class="pub-links">
+                        <span class="tag highlight">Selected</span>
+                        <a href="https://arxiv.org/abs/2505.23540" target="_blank">[Paper]</a>
+                        <a href="https://github.com/YunqiaoYang/PCPO" target="_blank">[Code]</a>
+                    </div>
+                </li>
+
+
+
+                <!-- Paper 3: Code Gen -->
+                <li class="pub-item">
+                    <div class="pub-title">Alignment with Fill-In-the-Middle for Enhancing Code Generation</div>
+                    <div class="pub-authors">
+                        Houxing Ren, Zimu Lu, Weikang Shi, Haotian Hou, <span class="me">Yunqiao Yang</span>, Ke Wang, Aojun Zhou, Junting Pan, Mingjie Zhan, Hongsheng Li
+                    </div>
+                    <div class="pub-venue">Main Conference Paper of the 2025 Conference on Empirical Methods in Natural Language Processing</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank">[Paper]</a>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h2>💻 Projects & Resources</h2>
+            <p>
+                We open-source the code and datasets for our research to facilitate reproducibility and further exploration.
+            </p>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <div class="pub-title"><a href="https://github.com/mnluzimu/WebGen-Bench" style="text-decoration:none; color:var(--primary-color);">WebGen-Bench</a></div>
+                    <div class="pub-authors">
+                        The first benchmark for evaluating LLM-based agents on generating websites from scratch.
+                    </div>
+                </li>
+                <li class="pub-item">
+                    <div class="pub-title"><a href="https://github.com/YunqiaoYang/PCPO" style="text-decoration:none; color:var(--primary-color);">PCPO: Preference Optimization Framework</a></div>
+                    <div class="pub-authors">
+                        A novel framework that establishes dual quantitative metrics (surface-level correctness & token-level consistency) for preference selection in LLMs.
+                    </div>
+                </li>
+                
+            </ul>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2025 Yunqiao Yang. Powered by GitHub Pages.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
