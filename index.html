@@ -106,7 +106,12 @@
 
         /* Publications List */
         .pub-list { list-style: none; padding: 0; }
-        .pub-item { margin-bottom: 25px; }
+        .pub-item {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
         
         .pub-title {
             font-weight: 700;
@@ -154,29 +159,19 @@
             font-family: monospace;
         }
 
-        /* Method Overview */
-        .method-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 24px;
-            margin-bottom: 35px;
-            padding: 18px;
-            border: 1px solid var(--light-gray);
-            border-radius: 8px;
-            background: #fafbfc;
+        /* Publication items with thumbnail */
+        .pub-thumb {
+            flex: 0 0 200px;
+            max-width: 200px;
         }
-        .method-fig {
-            flex: 0 0 58%;
-            max-width: 58%;
-        }
-        .method-fig img {
+        .pub-thumb img {
             width: 100%;
             height: auto;
             border: 1px solid var(--light-gray);
             border-radius: 6px;
             display: block;
         }
-        .method-info { flex: 1; }
+        .pub-info { flex: 1; }
 
         /* Footer */
         footer {
@@ -191,8 +186,8 @@
         @media (max-width: 600px) {
             .hero { flex-direction: column; align-items: center; text-align: center; }
             .news-list li { flex-direction: column; }
-            .method-item { flex-direction: column; }
-            .method-fig { flex: none; max-width: 100%; }
+            .pub-item { flex-direction: column; }
+            .pub-thumb { flex: none; max-width: 100%; }
         }
     </style>
 </head>
@@ -206,7 +201,6 @@
                 <a href="#about">About</a>
                 <a href="#news">News</a>
                 <a href="#awards">Awards</a>
-                <a href="#method">Method</a>
                 <a href="#publications">Publications</a>
                 <a href="#projects">Projects</a>
             </nav>
@@ -292,50 +286,57 @@
             <ul class="pub-list">
                 <!-- Paper 1: SlidesGen-Bench -->
                 <li class="pub-item">
-                    <div class="pub-title">SlidesGen-Bench: Evaluating Slides Generation via Computational and Quantitative Metrics</div>
-                    <div class="pub-authors">
-                        <span class="me">Yunqiao Yang*</span>, Wenbo Li*, Houxing Ren*, Zimu Lu, Ke Wang, Zhiyuan Huang, Zhuofan Zong, Mingjie Zhan, Hongsheng Li
-                    </div>
-                    <div class="pub-venue">Main Conference of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)</div>
-                    <div class="pub-links">
-                        <span class="tag highlight">Selected</span>
-                        <a href="https://arxiv.org/abs/2601.09487" target="_blank">[Paper]</a>
-                        <a href="https://slidesgenbench.yqy314.top/" target="_blank">[Homepage]</a>
-                        <a href="https://github.com/YunqiaoYang/SlidesGen-Bench" target="_blank">[Code]</a>
-                        <a href="https://huggingface.co/datasets/Yqy6/Slides-Align" target="_blank">[Dataset]</a>
+                    <div class="pub-thumb"><a href="selected/SlidesGen-Bench.pdf" target="_blank"><img src="selected/SlidesGen-Bench.png" alt="SlidesGen-Bench method pipeline"></a></div>
+                    <div class="pub-info">
+                        <div class="pub-title">SlidesGen-Bench: Evaluating Slides Generation via Computational and Quantitative Metrics</div>
+                        <div class="pub-authors">
+                            <span class="me">Yunqiao Yang*</span>, Wenbo Li*, Houxing Ren*, Zimu Lu, Ke Wang, Zhiyuan Huang, Zhuofan Zong, Mingjie Zhan, Hongsheng Li
+                        </div>
+                        <div class="pub-venue">Main Conference of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)</div>
+                        <div class="pub-links">
+                            <span class="tag highlight">Selected</span>
+                            <a href="https://arxiv.org/abs/2601.09487" target="_blank">[Paper]</a>
+                            <a href="https://slidesgenbench.yqy314.top/" target="_blank">[Homepage]</a>
+                            <a href="https://github.com/YunqiaoYang/SlidesGen-Bench" target="_blank">[Code]</a>
+                            <a href="https://huggingface.co/datasets/Yqy6/Slides-Align" target="_blank">[Dataset]</a>
+                        </div>
                     </div>
                 </li>
 
                 <!-- Paper 2: WebGen-Bench -->
                 <li class="pub-item">
-                    <div class="pub-title">WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch</div>
-                    <div class="pub-authors">
-                        Zimu Lu*, <span class="me">Yunqiao Yang*</span>, Houxing Ren*, Haotian Hou, Han Xiao, Ke Wang, Weikang Shi, Aojun Zhou, Mingjie Zhan, Hongsheng Li
-                    </div>
-                    <div class="pub-venue"><strong>Oral</strong> of the Thirty-Ninth Annual Conference on Neural Information Processing Systems</div>
-                    <div class="pub-links">
-                        <span class="tag highlight">Selected</span>
-                        <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/121451" target="_blank">[Paper]</a> 
-                        <a href="https://github.com/mnluzimu/WebGen-Bench" target="_blank">[Code]</a>
-                        <a href="https://huggingface.co/datasets/luzimu/WebGen-Bench" target="_blank">[Dataset]</a>
+                    <div class="pub-thumb"><a href="selected/Webgen-Bench.pdf" target="_blank"><img src="selected/Webgen-Bench.png" alt="WebGen-Bench method pipeline"></a></div>
+                    <div class="pub-info">
+                        <div class="pub-title">WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch</div>
+                        <div class="pub-authors">
+                            Zimu Lu*, <span class="me">Yunqiao Yang*</span>, Houxing Ren*, Haotian Hou, Han Xiao, Ke Wang, Weikang Shi, Aojun Zhou, Mingjie Zhan, Hongsheng Li
+                        </div>
+                        <div class="pub-venue"><strong>Oral</strong> of the Thirty-Ninth Annual Conference on Neural Information Processing Systems</div>
+                        <div class="pub-links">
+                            <span class="tag highlight">Selected</span>
+                            <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/121451" target="_blank">[Paper]</a> 
+                            <a href="https://github.com/mnluzimu/WebGen-Bench" target="_blank">[Code]</a>
+                            <a href="https://huggingface.co/datasets/luzimu/WebGen-Bench" target="_blank">[Dataset]</a>
+                        </div>
                     </div>
                 </li>
-              
-                <!-- Paper 2: PCPO -->
+
+                <!-- Paper 3: PCPO -->
                 <li class="pub-item">
-                    <div class="pub-title">Probability-Consistent Preference Optimization for Enhanced LLM Reasoning</div>
-                    <div class="pub-authors">
-                        <span class="me">Yunqiao Yang*</span>, Houxing Ren*, Zimu Lu, Ke Wang, Weikang Shi, Aojun Zhou, Junting Pan, Mingjie Zhan, Hongsheng Li
-                    </div>
-                    <div class="pub-venue">Findings of the Association for Computational Linguistics (ACL), 2025</div>
-                    <div class="pub-links">
-                        <span class="tag highlight">Selected</span>
-                        <a href="https://aclanthology.org/2025.findings-acl.333.pdf" target="_blank">[Paper]</a>
-                        <a href="https://github.com/YunqiaoYang/PCPO" target="_blank">[Code]</a>
+                    <div class="pub-thumb"><a href="selected/PCPO.pdf" target="_blank"><img src="selected/PCPO.png" alt="PCPO method pipeline"></a></div>
+                    <div class="pub-info">
+                        <div class="pub-title">Probability-Consistent Preference Optimization for Enhanced LLM Reasoning</div>
+                        <div class="pub-authors">
+                            <span class="me">Yunqiao Yang*</span>, Houxing Ren*, Zimu Lu, Ke Wang, Weikang Shi, Aojun Zhou, Junting Pan, Mingjie Zhan, Hongsheng Li
+                        </div>
+                        <div class="pub-venue">Findings of the Association for Computational Linguistics (ACL), 2025</div>
+                        <div class="pub-links">
+                            <span class="tag highlight">Selected</span>
+                            <a href="https://aclanthology.org/2025.findings-acl.333.pdf" target="_blank">[Paper]</a>
+                            <a href="https://github.com/YunqiaoYang/PCPO" target="_blank">[Code]</a>
+                        </div>
                     </div>
                 </li>
-
-
 
                 <!-- Paper 3: Code Gen
                 <li class="pub-item">
@@ -350,48 +351,6 @@
                 </li> -->
 
             </ul>
-        </section>
-
-        <!-- METHOD OVERVIEWS SECTION -->
-        <section id="method">
-            <h2>🎨 Method Overviews</h2>
-            <div class="method-item">
-                <div class="method-fig"><a href="selected/SlidesGen-Bench.pdf" target="_blank"><img src="selected/SlidesGen-Bench.png" alt="SlidesGen-Bench method pipeline"></a></div>
-                <div class="method-info">
-                    <div class="pub-title">SlidesGen-Bench</div>
-                    <div class="pub-authors">Evaluating Slides Generation via Computational and Quantitative Metrics</div>
-                    <div class="pub-venue">EMNLP 2026 (Main Conference)</div>
-                    <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2601.09487" target="_blank">[Paper]</a>
-                        <a href="https://slidesgenbench.yqy314.top/" target="_blank">[Homepage]</a>
-                        <a href="https://github.com/YunqiaoYang/SlidesGen-Bench" target="_blank">[Code]</a>
-                    </div>
-                </div>
-            </div>
-            <div class="method-item">
-                <div class="method-fig"><a href="selected/Webgen-Bench.pdf" target="_blank"><img src="selected/Webgen-Bench.png" alt="WebGen-Bench method pipeline"></a></div>
-                <div class="method-info">
-                    <div class="pub-title">WebGen-Bench</div>
-                    <div class="pub-authors">Evaluating LLMs on Generating Interactive and Functional Websites from Scratch</div>
-                    <div class="pub-venue">Oral, NeurIPS 2025</div>
-                    <div class="pub-links">
-                        <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/121451" target="_blank">[Paper]</a>
-                        <a href="https://github.com/mnluzimu/WebGen-Bench" target="_blank">[Code]</a>
-                    </div>
-                </div>
-            </div>
-            <div class="method-item">
-                <div class="method-fig"><a href="selected/PCPO.pdf" target="_blank"><img src="selected/PCPO.png" alt="PCPO method pipeline"></a></div>
-                <div class="method-info">
-                    <div class="pub-title">PCPO</div>
-                    <div class="pub-authors">Probability-Consistent Preference Optimization for Enhanced LLM Reasoning</div>
-                    <div class="pub-venue">Findings of ACL 2025</div>
-                    <div class="pub-links">
-                        <a href="https://aclanthology.org/2025.findings-acl.333.pdf" target="_blank">[Paper]</a>
-                        <a href="https://github.com/YunqiaoYang/PCPO" target="_blank">[Code]</a>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- PROJECTS SECTION -->
